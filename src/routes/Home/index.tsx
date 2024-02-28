@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 import { useAppDispatch, useAppSelector } from "@/hooks/hooks";
 import { increment, decrement } from "@/store/slices/counterSlice";
 import { useGetPostsQuery } from "@/services/postApi";
@@ -16,8 +16,9 @@ function Home() {
 
   return (
     <div className={styles.main}>
-      <div>
-        <h1>Total: {count} </h1>
+      <h1>Manejo Global de Redux Toolkit</h1>
+      <div className={styles.buttons_section}>
+        <h2>Total: {count} </h2>
 
         <button
           onClick={() => {
@@ -26,9 +27,6 @@ function Home() {
         >
           Subir
         </button>
-
-        <br />
-
         <button
           onClick={() => {
             dispatch(decrement());
@@ -36,10 +34,13 @@ function Home() {
         >
           Bajar
         </button>
+      </div>
+      <h1>Conexión con Posts de Json Placeholder</h1>
 
+      <div className={styles.posts_container}>
         {data?.map((post) => (
-          <div>
-            <p>{post.title}</p>
+          <div className={styles.post}>
+            <h3>{post.title}</h3>
             <p>{post.body}</p>
           </div>
         ))}
