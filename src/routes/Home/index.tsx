@@ -1,8 +1,8 @@
 "use client";
 
 import styles from "./styles.module.scss";
-import { useAppDispatch, useAppSelector } from "@/hooks/hooks";
-import { increment, decrement } from "@/store/slices/counterSlice";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { increment, decrement } from "@/store/features/counterSlice";
 import { useGetPostsQuery } from "@/services/postApi";
 
 function Home() {
@@ -35,6 +35,7 @@ function Home() {
           Bajar
         </button>
       </div>
+
       <h1>Conexión con Posts de Json Placeholder</h1>
 
       <div className={styles.posts_container}>
