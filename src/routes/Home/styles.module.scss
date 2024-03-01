@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  min-height: 100vh;
+  .link {
+    color: #f3d4f3;
+    background-color: black;
+    padding: 20px;
+  }
+}
