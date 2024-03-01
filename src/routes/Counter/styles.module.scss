@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  button {
+    background-color: #ae1cc1;
+    padding: 15px;
+    border-radius: 20%;
+    color: white;
+    font-size: 10px;
+  }
+  h2 {
+    text-align: center;
+  }
+}
